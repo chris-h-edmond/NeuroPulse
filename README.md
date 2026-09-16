@@ -1,2 +1,31 @@
-# NeuroPulse
-ML Model Performance & Data Quality Analytics Platform  Core idea  Imagine a company has several ML models running in production.  NeuroPulse answers:  "Are our models still performing correctly, and is our data still healthy?"  It collects model predictions, actual outcomes, latency, dataset-quality metrics, and drift measurements, stores them in PostgreSQL, analyzes them with SQL, and exposes everything through Apache Superset.                      ML Systems                         │               ┌─────────┴─────────┐               ↓                   ↓         Predictions           Data Metrics               │                   │               └─────────┬─────────┘                         ↓                    Python ETL                         ↓                    PostgreSQL                         ↓                  SQL Analytics                         ↓                 Apache Superset                         ↓           ┌─────────────┼─────────────┐           ↓             ↓             ↓       Dashboard       Trends        Alerts
+ML Model Performance & Data Quality Analytics Platform
+
+Core idea
+
+Imagine a company has several ML models running in production.
+
+NeuroPulse answers:
+
+"Are our models still performing correctly, and is our data still healthy?"
+
+It collects model predictions, actual outcomes, latency, dataset-quality metrics, and drift measurements, stores them in PostgreSQL, analyzes them with SQL, and exposes everything through Apache Superset.
+
+                    ML Systems
+                        │
+              ┌─────────┴─────────┐
+              ↓                   ↓
+        Predictions           Data Metrics
+              │                   │
+              └─────────┬─────────┘
+                        ↓
+                   Python ETL
+                        ↓
+                   PostgreSQL
+                        ↓
+                 SQL Analytics
+                        ↓
+                Apache Superset
+                        ↓
+          ┌─────────────┼─────────────┐
+          ↓             ↓             ↓
+      Dashboard       Trends        Alerts
